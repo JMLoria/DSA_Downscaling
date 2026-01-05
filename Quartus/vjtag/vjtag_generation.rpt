@@ -1,0 +1,55 @@
+Info: Starting: Create simulation model
+Info: qsys-generate D:\EjemploProfe\vjtag.qsys --simulation=VERILOG --allow-mixed-language-simulation --output-directory=D:\EjemploProfe\vjtag\simulation --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading EjemploProfe/vjtag.qsys
+Progress: Reading input file
+Progress: Adding virtual_jtag_0 [altera_virtual_jtag 22.1]
+Progress: Parameterizing module virtual_jtag_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: vjtag: Generating vjtag "vjtag" for SIM_VERILOG
+Info: virtual_jtag_0: "vjtag" instantiated altera_virtual_jtag "virtual_jtag_0"
+Info: vjtag: Done "vjtag" with 2 modules, 2 files
+Info: qsys-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd=D:\EjemploProfe\vjtag\vjtag.spd --output-directory=D:/EjemploProfe/vjtag/simulation/ --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=D:\EjemploProfe\vjtag\vjtag.spd --output-directory=D:/EjemploProfe/vjtag/simulation/ --use-relative-paths=true
+Info: Generating the following file(s) for RIVIERA simulator in D:/EjemploProfe/vjtag/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: Generating the following file(s) for MODELSIM simulator in D:/EjemploProfe/vjtag/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under D:/EjemploProfe/vjtag/simulation/.
+Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: Finished: Create Modelsim Project.
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate D:\EjemploProfe\vjtag.qsys --block-symbol-file --output-directory=D:\EjemploProfe\vjtag --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading EjemploProfe/vjtag.qsys
+Progress: Reading input file
+Progress: Adding virtual_jtag_0 [altera_virtual_jtag 22.1]
+Progress: Parameterizing module virtual_jtag_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate D:\EjemploProfe\vjtag.qsys --synthesis=VERILOG --greybox --output-directory=D:\EjemploProfe\vjtag\synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading EjemploProfe/vjtag.qsys
+Progress: Reading input file
+Progress: Adding virtual_jtag_0 [altera_virtual_jtag 22.1]
+Progress: Parameterizing module virtual_jtag_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: vjtag: Generating vjtag "vjtag" for QUARTUS_SYNTH
+Info: virtual_jtag_0: "vjtag" instantiated altera_virtual_jtag "virtual_jtag_0"
+Info: vjtag: Done "vjtag" with 2 modules, 1 files
+Info: Generating third-party timing and resource estimation model ...
+Info: Done generating third-party timing and resource estimation model.
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

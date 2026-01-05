@@ -1,0 +1,139 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/TestProyecto2/simulation/modelsim
+vimg_writer
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1764948102
+!i10b 1
+!s100 @GokkK8:8eOP_QIKhkkLH0
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I=DciJmzUE>[^0VZ?CfWOO1
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1764916522
+8D:/TestProyecto2/img_writer.sv
+FD:/TestProyecto2/img_writer.sv
+!i122 5
+L0 1 70
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1764948102.000000
+!s107 D:/TestProyecto2/img_writer.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/TestProyecto2|D:/TestProyecto2/img_writer.sv|
+!i113 1
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+D:/TestProyecto2
+Z9 tCvgOpt 0
+vinstruction_handler
+R1
+R2
+!i10b 1
+!s100 =XohHAL059F57GGzAK1Go1
+R3
+IZaKWL;_z`eGBdgBf7USj=3
+R4
+S1
+R0
+w1764946505
+8D:/TestProyecto2/instruction_handler.sv
+FD:/TestProyecto2/instruction_handler.sv
+!i122 6
+L0 1 189
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/TestProyecto2/instruction_handler.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/TestProyecto2|D:/TestProyecto2/instruction_handler.sv|
+!i113 1
+R7
+R8
+R9
+vinstruction_handler_memory_tb
+R1
+R2
+!i10b 1
+!s100 X>hV0F]6`FZaT834g>BPP0
+R3
+IT6iPhPI4lc8]aQU5_9PF>1
+R4
+S1
+R0
+w1764948055
+8D:/TestProyecto2/instruction_handler_memory_tb.sv
+FD:/TestProyecto2/instruction_handler_memory_tb.sv
+!i122 7
+L0 3 254
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/TestProyecto2/instruction_handler_memory_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/TestProyecto2|D:/TestProyecto2/instruction_handler_memory_tb.sv|
+!i113 1
+R7
+R8
+R9
+vmemory_interface
+R1
+R2
+!i10b 1
+!s100 =1aLEZzDhDY0M5Naa;eiN3
+R3
+I_e<`IHEN2k7XlE:MBa5O]0
+R4
+S1
+R0
+w1764776672
+8D:/TestProyecto2/memory_interface.sv
+FD:/TestProyecto2/memory_interface.sv
+!i122 8
+L0 1 30
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/TestProyecto2/memory_interface.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/TestProyecto2|D:/TestProyecto2/memory_interface.sv|
+!i113 1
+R7
+R8
+R9
+vram
+R2
+!i10b 1
+!s100 3_Gc=O1bBS4LV>Rc]eGD70
+R3
+IoUV7bom6NC<43eEV]2cB83
+R4
+R0
+w1764752688
+8D:/TestProyecto2/ram.v
+FD:/TestProyecto2/ram.v
+!i122 9
+L0 40 69
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/TestProyecto2/ram.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/TestProyecto2|D:/TestProyecto2/ram.v|
+!i113 1
+o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+D:/TestProyecto2
+R9

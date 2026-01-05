@@ -1,0 +1,80 @@
+module instruction_handler (
+    input  logic        clk,
+    input  logic        reset_n,
+    input  logic [31:0] instruction 
+    
+    output logic        i_mode_select,
+    output logic        debug_mode,
+    output logic [8:0]  img_width,
+    output logic [8:0]  img_height,
+    output logic [2:0]  N_simd,
+    output logic [7:0]  scale_factor,
+
+	input logic  [31:0] i_mem_rdata,
+	output logic        o_mem_we,
+	output logic [3:0]  o_mem_byte_en,
+    output logic [15:0] o_mem_addr,
+	output logic [31:0] o_mem_wdata,
+
+    output logic [31:0] response_data,
+    output logic        start
+    );
+
+logic is_ready_to_start = 1'b0;
+logic reciving_img_data = 1'b0;
+logic [31:0] img_data_lenght = 4'd0;
+logic [31:0] img_data_counter = 4'd0;
+
+always_ff @( posedge clk or negedge reset_n ) begin
+
+    if ( ~reset_n ) begin
+        i_mode_select <= 1'b0;
+        debug_mode <= 1'b0;
+        img_width <= 9'd0;
+        img_height <= 9'd0;
+        N_simd <= 3'd0;
+        scale_factor <= 8'd0;
+        img_data_counter <= 32'd0;
+        reciving_img_data <= 1'b0;
+        start <= 1'b0;
+        return;
+    end
+
+    // Decode instruction
+    else if (reciving_img_data) begin
+        // Image data instruction
+        if (img_data_counter < img_data_lenght) begin
+
+            img_data_counter <= img_data_counter + 4;
+        end
+
+        else begin
+            reciving_img_data <= 1'b0;
+            is_ready_to_start <= 1'b1;
+        end
+    end else if (instruction[31] == 1'b1 && ~|instruction[30:0]) begin
+
+        // Configuration instruction
+        i_mode_select <= instruction[30];
+        debug_mode <= instruction[29];
+        img_width <= instruction[28:20];
+        img_height <= instruction[19:11];
+        N_simd <= instruction[10:8];
+        scale_factor <= instruction[7:0];
+
+        img_data_lenght <= img_height * img_width;
+        reciving_img_data <= 1'b1;
+    
+    end else if (is_ready_to_start) begin
+        // Start processing
+        start <= 1'b1;
+        is_ready_to_start <= 1'b0;
+    end
+
+
+    
+
+end 
+
+
+endmodule
